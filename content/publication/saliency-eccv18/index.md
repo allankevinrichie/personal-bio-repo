@@ -34,8 +34,8 @@ tags:
 featured: true
 
 links:
-- name: Dataset (code:2f4e)
-  url: http://example.org
+- name: Dataset (BaiduPan, code:2f4e)
+  url: https://pan.baidu.com/s/1V9LmYzYJDX34LKa4zafK2g
 url_pdf: http://openaccess.thecvf.com/content_ECCV_2018/papers/Ziheng_Zhang_Saliency_Detection_in_ECCV_2018_paper.pdf
 url_code: 'https://github.com/svip-lab/Saliency-Detection-in-360-Videos'
 # url_dataset: '#'
