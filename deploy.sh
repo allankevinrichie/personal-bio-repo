@@ -4,8 +4,9 @@ echo -e "\033[0;32mUpdating CV...\033[0m"
 # Build CV
 cd static/files/cv_src
 git pull origin master
-pdflatex -interaction=nonstopmode -output-directory=../cv_build_tmp/ cv.tex
+pdflatex -interaction=batchmode -output-directory=../cv_build_tmp/ cv.tex
 mv ../cv_build_tmp/cv.pdf ../cv_zhangzh.pdf
+rm -rf ../cv_build_tmp/*
 cd ../../..
 
 echo -e "\033[0;32mDeploying updates to Netlify...\033[0m"
