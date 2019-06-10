@@ -1,4 +1,14 @@
 #!/bin/bash
+
+echo -e "\033[0;32mUpdating CV...\033[0m"
+# Build CV
+cd static/files/cv_src
+git pull origin master
+pdflatex -interaction=nonstopmode cv.tex -output-directory=../cv_build_tmp/
+mv ../cv_build_tmp/cv.pdf ../
+rm -rf ../cv_build_tmp
+cd ../../..
+
 echo -e "\033[0;32mDeploying updates to Netlify...\033[0m"
 git add .
 if [ $# -eq 1 ]
