@@ -7,6 +7,7 @@ weight = 65  # Order that this section will appear.
 
 title = "Projects"
 subtitle = ""
+draft = true
 
 [content]
   # Page type to display. E.g. project.

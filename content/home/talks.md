@@ -9,6 +9,7 @@ weight = 70  # Order that this section will appear.
 
 title = "Recent & Upcoming Talks"
 subtitle = ""
+draft = true
 
 [content]
   # Page type to display. E.g. post, talk, or publication.
