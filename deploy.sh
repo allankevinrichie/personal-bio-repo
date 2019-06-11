@@ -9,6 +9,10 @@ mv ../cv_build_tmp/cv.pdf ../cv_zhangzh.pdf
 rm -rf ../cv_build_tmp/*
 cd ../../..
 
+echo -e "current working dir: $pwd"
+
+
+read -p "Press Enter to Continue..."
 echo -e "\033[0;32mDeploying updates to Netlify...\033[0m"
 git add .
 if [ $# -eq 1 ]
@@ -17,6 +21,7 @@ fi
 git commit -m "$msg"
 git push origin master
 
+read -p "Press Enter to Continue..."
 echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
 
 # Build the project.
@@ -28,6 +33,7 @@ cd public
 git add .
 
 # Commit changes.
+read -p "Press Enter to Continue..."
 msg="rebuilding site `date`"
 if [ $# -eq 1 ]
   then msg="$1"
