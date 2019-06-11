@@ -1,5 +1,4 @@
 #!/bin/bash
-
 echo -e "\033[0;32mUpdating CV...\033[0m"
 # Build CV
 cd static/files/cv_src
@@ -11,22 +10,20 @@ cd ../../..
 
 echo -e "current working dir: `pwd`"
 
-
-read -p "Press Enter to Continue..."
-echo -e "\033[0;32mDeploying updates to Netlify...\033[0m"
+echo -e "\033[0;32mUpdating source code to GitHub...\033[0m"
 git add .
+msg="rebuilding site `date`"
 if [ $# -eq 1 ]
   then msg="$1"
-else
-  msg="minor update@`date`"
 fi
 git commit -m "$msg"
 git push origin master
 
-read -p "Press Enter to Continue..."
 echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
-
 # Build the project.
+if [ $# -eq 1 ]
+  then msg="$1"
+fi
 hugo -t academic # if using a theme, replace with `hugo -t <YOURTHEME>`
 
 # Go To Public folder
@@ -36,10 +33,6 @@ git add .
 
 # Commit changes.
 read -p "Press Enter to Continue..."
-msg="rebuilding site `date`"
-if [ $# -eq 1 ]
-  then msg="$1"
-fi
 git commit -m "$msg"
 
 # Push source and build repos.

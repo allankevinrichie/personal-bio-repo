@@ -1,3 +1,6 @@
-public/
+public/*
+!public/.gitkeep
 .idea/
+
 static/files/cv_build_tmp/*
+!static/files/cv_build_tmp/.gitkeep

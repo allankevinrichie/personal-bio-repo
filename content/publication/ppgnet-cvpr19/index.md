@@ -44,10 +44,10 @@ links:
 - name: Dataset (Google Drive)
   url: https://drive.google.com/file/d/1KggPcHCRu8BcOqCvVZCXiB64y9L2nQDf/view?usp=sharing
 
-url_pdf: http://openaccess.thecvf.com/content_CVPR_2019/papers/Zhang_PPGNet_Learning_Point-Pair_Graph_for_Line_Segment_Detection_CVPR_2019_paper.pdf
+url_pdf: "ppgnet-cvpr19.pdf"
 url_code: https://github.com/svip-lab/PPGNet
 # url_dataset: '#'
-# url_poster: '#'
+url_poster: 'ppgnet-cvpr19-poster.pdf'
 # url_project: ''
 # url_slides: ''
 # url_source: '#'
