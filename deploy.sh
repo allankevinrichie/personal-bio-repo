@@ -9,7 +9,7 @@ mv ../cv_build_tmp/cv.pdf ../cv_zhangzh.pdf
 rm -rf ../cv_build_tmp/*
 cd ../../..
 
-echo -e "current working dir: $pwd"
+echo -e "current working dir: `pwd`"
 
 
 read -p "Press Enter to Continue..."
@@ -17,6 +17,8 @@ echo -e "\033[0;32mDeploying updates to Netlify...\033[0m"
 git add .
 if [ $# -eq 1 ]
   then msg="$1"
+else
+  msg="minor update@`date`"
 fi
 git commit -m "$msg"
 git push origin master
