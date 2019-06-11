@@ -1,4 +1,10 @@
 #!/bin/bash
+
+msg="rebuilding site `date`"
+if [ $# -eq 1 ]
+  then msg="$1"
+fi
+
 echo -e "\033[0;32mUpdating CV...\033[0m"
 # Build CV
 cd static/files/cv_src
@@ -12,10 +18,6 @@ echo -e "current working dir: `pwd`"
 
 echo -e "\033[0;32mUpdating source code to GitHub...\033[0m"
 git add .
-msg="rebuilding site `date`"
-if [ $# -eq 1 ]
-  then msg="$1"
-fi
 git commit -m "$msg"
 git push origin master
 
@@ -32,7 +34,6 @@ cd public
 git add .
 
 # Commit changes.
-read -p "Press Enter to Continue..."
 git commit -m "$msg"
 
 # Push source and build repos.
