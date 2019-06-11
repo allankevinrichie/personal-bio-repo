@@ -66,4 +66,4 @@ user_groups:
 - Visitors
 ---
 
-Ziheng Zhang is a master student at the School of Information Science and Techology, ShanghaiTech University. His research insterests include computer vision and deep learning. Before coming to ShanghaiTech University, he receives his BSc. Degree from Xidian University, Xi`An, China. He is currently looking for research assistant position (Jul.2019-Jan.2020) and doctoral program (2020, Spring) in computer science.
+Ziheng Zhang is a master student at the School of Information Science and Techology, ShanghaiTech University. His research insterests include computer vision and deep learning. Before coming to ShanghaiTech University, he receives his BSc. Degree from Xidian University, Xi`An, China. He is currently looking for research assistant position (Jul.2019-Jan.2020) and doctoral program (Spring, 2020) in computer science.
