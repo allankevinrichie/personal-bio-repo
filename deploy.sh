@@ -22,6 +22,12 @@ git commit -m "$msg"
 git push origin master
 
 echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
+# initialize public folder if not
+if [ ! -d "public/.git" ]; then
+  rm -rf public
+  git clone git@github.com:allankevinrichie/allankevinrichie.github.io.git public
+fi
+
 # Build the project.
 if [ $# -eq 1 ]
   then msg="$1"
@@ -30,6 +36,8 @@ hugo -t academic # if using a theme, replace with `hugo -t <YOURTHEME>`
 
 # Go To Public folder
 cd public
+# first pull changes
+git pull origin master
 # Add changes to git.
 git add .
 
